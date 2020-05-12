@@ -200,7 +200,7 @@ def xml_parser():
                 elif ele.tag == "sense":
                     parse_sense(ele, new_ele)
             DATA.append(new_ele)
-    return DATA
+    return {"word": DATA}
 
 def xml_to_json():
     """ Convert xml to json and save to file """

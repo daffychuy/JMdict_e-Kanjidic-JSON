@@ -70,7 +70,7 @@ def xml_parser():
                 elif ele.tag.lower() == "misc":
                     parse_misc(ele, new_ele)
             DATA.append(new_ele)
-    return DATA
+    return {"words": DATA}
 
 def xml_to_json():
     """ Convert xml to json and save to file """
