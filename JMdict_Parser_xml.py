@@ -114,9 +114,11 @@ def parse_sense(elements, new):
     sense = copy.deepcopy(SENSE_TEMPLATE)
     for ele in elements:
         if ele.tag.lower() == "stagr":
-            sense['appliesToKana'] = ele.text
+            # TODO: Fix this part, where it needs to be a list
+            sense['appliesToKana'].append(ele.text)
         elif ele.tag.lower() == "stagk":
-            sense['appliesToKanji'] = ele.text
+            # TODO: Fix this part, where it needs to be a list
+            sense['appliesToKanji'].append(ele.text)
         elif ele.tag.lower() == "pos":
             sense['partsOfSpeech'].append(ele.text)
         elif ele.tag.lower() == "xref":
@@ -200,7 +202,7 @@ def xml_parser():
                 elif ele.tag == "sense":
                     parse_sense(ele, new_ele)
             DATA.append(new_ele)
-    return {"word": DATA}
+    return {"words": DATA}
 
 def xml_to_json():
     """ Convert xml to json and save to file """
