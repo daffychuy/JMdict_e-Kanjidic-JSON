@@ -1,6 +1,7 @@
 # What is this
 This repository contains the two script that I am using for converting all the xml data to a more friendly and usable file that allows me to parse for the dictionary app project. (Link coming soon)
-
+### Download
+https://github.com/daffychuy/JMdict_e-Kanjidic-JSON/releases/latest
 # Why such a script
 For someone who have worked with data type that's not xml, it makes more sense to have a more friendlier datatype to be working with aka Json in my case
 
